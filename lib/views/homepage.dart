@@ -52,29 +52,16 @@ class _HomePageState extends State<HomePage> {
             (e) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GlassmorphicContainer(
-                  height: 100,
-                  width: double.infinity,
-                  blur: 1,
-                  borderRadius: 20,
-                  border: 0.7,
-                  linearGradient: LinearGradient(
-                    colors: [
-                      const Color(0xFFFFFFFF).withOpacity(0.2),
-                      const Color(0xFFFFFFFF).withOpacity(0.5),
-                    ],
-                    stops: const [
-                      0.1,
-                      1,
-                    ],
-                  ),
-                  borderGradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      const Color(0xFFffffff).withOpacity(0.5),
-                      const Color((0xFFFFFFFF)).withOpacity(0.5),
-                    ],
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadiusDirectional.circular(10),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.amber.withOpacity(0.5),
+                        Colors.deepOrangeAccent.withOpacity(0.2),
+                      ],
+                    ),
                   ),
                   child: Center(
                     child: ListTile(

@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
                 ? ThemeMode.light
                 : ThemeMode.dark,
             debugShowCheckedModeBanner: false,
-            initialRoute: 'welcome',
+            initialRoute: 'splesh',
             routes: {
               '/': (context) => const HomePage(),
               'splesh': (context) => const Splesh(),

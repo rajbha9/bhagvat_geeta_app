@@ -12,7 +12,6 @@ class Splesh extends StatefulWidget {
 class _SpleshState extends State<Splesh> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacementNamed('/');

@@ -18,9 +18,12 @@ class _NavbarState extends State<Navbar> {
     ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
     LangProvider langProvider = Provider.of<LangProvider>(context);
     return Drawer(
-      backgroundColor: Colors.orange.shade300,
+      backgroundColor: Colors.orangeAccent.withOpacity(0.6),
       child: ListView(
-        children: [
+        children: [const SizedBox(height: 20),
+          const Image(
+            image: AssetImage('asset/img/splash.png'),
+          ),const SizedBox(height: 50),
           Container(
             margin: const EdgeInsets.all(10),
             height: 70,
@@ -47,7 +50,7 @@ class _NavbarState extends State<Navbar> {
                     : Colors.black,
                 // width: 59,
                 image: const AssetImage(
-                  'assets/img/hindi.png',
+                  'asset/img/hindi.png',
                 ),
                 height: 70,
                 width: 90,
@@ -59,7 +62,7 @@ class _NavbarState extends State<Navbar> {
                     : Colors.black,
                 width: 59,
                 image: const AssetImage(
-                  'assets/img/english.png',
+                  'asset/img/english.png',
                 ),
                 height: 100,
                 fit: BoxFit.cover,
@@ -95,11 +98,7 @@ class _NavbarState extends State<Navbar> {
               ),
             ),
           ),
-          const SizedBox(height: 100),
-          const Image(
-            color: Colors.orange,
-            image: AssetImage('assets/img/splash.png'),
-          ),
+
         ],
       ),
     );
