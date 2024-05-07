@@ -33,13 +33,14 @@ class _MyAppState extends State<MyApp> {
           )
         ],
         builder: (context, child) {
-          return  MaterialApp(
+          return MaterialApp(
             theme: ThemeData.light(useMaterial3: true),
             darkTheme: ThemeData.dark(useMaterial3: true),
             themeMode:
-            (Provider.of<ThemeProvider>(context).themeModel.isLight != false)
-                ? ThemeMode.light
-                : ThemeMode.dark,
+                (Provider.of<ThemeProvider>(context).themeModel.isLight !=
+                        false)
+                    ? ThemeMode.light
+                    : ThemeMode.dark,
             debugShowCheckedModeBanner: false,
             initialRoute: 'splesh',
             routes: {

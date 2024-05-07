@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class Splesh extends StatefulWidget {
@@ -13,7 +12,7 @@ class _SpleshState extends State<Splesh> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacementNamed('/');
     });
   }
@@ -23,7 +22,7 @@ class _SpleshState extends State<Splesh> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: RadialGradient(colors: [
             Colors.amber,
             Colors.deepOrangeAccent,

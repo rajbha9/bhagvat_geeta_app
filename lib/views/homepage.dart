@@ -1,11 +1,8 @@
 import 'package:bhagvat_geeta/provider/json_data_pro.dart';
 import 'package:bhagvat_geeta/views/widgest/nevbar.dart';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 import 'package:provider/provider.dart';
-
 import '../provider/language_pro.dart';
-import '../provider/theme_pro.dart';
 import 'dateilpage.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,14 +16,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     JsonDataProvider dataProvider = Provider.of<JsonDataProvider>(context);
-    ThemeProvider themeProviderFalse =
-        Provider.of<ThemeProvider>(context, listen: false);
     LangProvider langProvider = Provider.of<LangProvider>(context);
-    LangProvider langProviderFalse =
-        Provider.of<LangProvider>(context, listen: false);
     dataProvider.getGeetaData();
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage(

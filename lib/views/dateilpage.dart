@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 import 'package:provider/provider.dart';
-
 import '../models/json_data_model.dart';
 import '../provider/language_pro.dart';
 
@@ -15,7 +12,7 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     LangProvider langProvider = Provider.of<LangProvider>(context);
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage(
